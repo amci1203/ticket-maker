@@ -25,11 +25,15 @@
                                 <input type='number' ng-model='item.price' />
                             </td>
                             <td>
-                                <input type='number' ng-model='item.amount'/>
+                                <input type='number' ng-model='item.amount' />
                             </td>
                         </tr>
                     </tbody>
                 </table>
+                <div id="radio">
+                    <label for='count-sheet-radio'>Print count sheet?</label>
+                    <input type='checkbox' id='count-sheet-radio' ng-model='main.printCount'/>
+                </div>
                 <button id='print-button' ng-click='main.printTickets()'>PRINT</button>
                 <h3>Preview:</h3>
                 <div id='demo-ticket' class='ticket'>
@@ -44,7 +48,10 @@
             </div>
         </section>
         <section id='ticket-sheet' class='page' ng-show='main.ticketsPrinted'>
-            <div class='ticket-sheet-wrapper'></div>
+            <div class='ticket-sheet-wrapper print-wrapper'></div>
+        </section>
+        <section id="count-sheet" class="page" ng-show='main.countPrinted'>
+            <div class='count-sheet-wrapper print-wrapper'></div>
         </section>
     </body>
 </html>

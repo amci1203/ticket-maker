@@ -16,6 +16,17 @@ body {
     padding: 18px;
     margin: 0 auto;
 }
+.print-wrapper {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    clear: both;
+    page-break-before: always;
+    page-break-after: always;
+}
+.print-wrapper.landscape {
+    max-width: 780px;
+}
 .body-blue {
     background-color: #223372;
     color: #FFF;
@@ -45,6 +56,10 @@ body {
     width: 100%;
     font-size: inherit;
 }
+#radio {
+    margin: 10px auto;
+    padding-top: 35px;
+}
 #print-button {
     background-color: #FFF;
     color: #223372;
@@ -71,11 +86,6 @@ body {
     text-align: center;
     font-weight: 600;
     font-size: 20px;
-}
-.ticket-sheet-wrapper {
-    width: 600px;
-    margin-right: auto;
-    margin-left: auto;
 }
 #demo-ticket {
     background-color: #FFF;
@@ -114,4 +124,43 @@ body {
     text-align: right;
     font-size: 24px;
     font-weight: 800;
+}
+.count-item {
+    display: block;
+    min-height: 1px;
+    clear: both;
+    text-align: left;
+    margin: 15px 0;
+    padding: 15px 0;
+}
+.count-item h3 {
+    float: left;
+    display: block;
+    width: 180px;
+    height: 100px;
+    margin: 0;
+    border-bottom: 1px solid #777;
+    font-weight: 600;
+}
+.count-item h3 span {
+    display: block;
+    font-weight: 300;
+}
+.count-item h3 span::before {
+    content: 'Printed : ';
+}
+.count-col {
+    background-color: #CCC;
+    border-collapse: collapse;
+    float: left;
+    height: 100px;
+    width: 20px;
+    border: 1px solid #333;
+}
+.count-block {
+    background-color: #FFF;
+    border-collapse: collapse;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #333;
 }
