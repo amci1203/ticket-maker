@@ -1,0 +1,54 @@
+<!DOCYPE HTML>
+<html ng-app='ticket-generator'>
+    <head>
+        <title>Ticket Generator</title>
+        <script src="app/angular.js"></script>
+        <script src="app/jquery.min.js"></script>
+        <script src="app.js"></script>
+        <link rel='stylesheet' href='styles.css' type='text/css' />
+    </head>
+    <body ng-controller='MainController as main' ng-class='{"body-blue" : !main.ticketsPrinted}'>
+        <section id='item-sheet' class='page' ng-show='!main.ticketsPrinted'>
+            <div class="wrapper">
+                <h1 id='title'>Ticket Generator</h1>
+                <p id='instructions'>Please specify the amount of tickets you wish to print for each item</p>
+                <table id='item-table'>
+                    <thead>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Amount</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat='item in main.items'>
+                            <td>{{item.name}}</td>
+                            <td>
+                                <input type='number' ng-model='item.price' />
+                            </td>
+                            <td>
+                                <input type='number' ng-model='item.amount'/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id='print-button' ng-click='main.printTickets()'>PRINT</button>
+                <h3>Preview:</h3>
+                <div id='demo-ticket' class='ticket'>
+                    <div class="wrapper">
+                        <img class='ticket-signature' src='ticket-signature.jpg' />
+                        <p class='ticket-number'>#1</p>
+                        <div class="ticket-body">
+                            <h2 class='ticket-item-name'>Name (Two Lined Name)</h2>
+                            <h3 class='ticket-item-price'>$0</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id='ticket-sheet' class='page' ng-show='main.ticketsPrinted'>
+<!--           <button id='return-button' ng-click='main.return()'>RETURN</button>-->
+            <div class='ticket-sheet-wrapper'>
+
+            </div>
+        </section>
+    </body>
+</html>
