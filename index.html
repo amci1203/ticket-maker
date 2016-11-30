@@ -2,7 +2,7 @@
 <html ng-app='ticket-generator'>
     <head>
         <title>Ticket Generator</title>
-        <script src="app/angular.js"></script>
+        <script src="app/angular.min.js"></script>
         <script src="app/jquery.min.js"></script>
         <script src="app.js"></script>
         <link rel='stylesheet' href='styles.css' type='text/css' />
@@ -34,7 +34,6 @@
                 <h3>Preview:</h3>
                 <div id='demo-ticket' class='ticket'>
                     <div class="wrapper">
-                        <img class='ticket-signature' src='ticket-signature.jpg' />
                         <p class='ticket-number'>#1</p>
                         <div class="ticket-body">
                             <h2 class='ticket-item-name'>Name (Two Lined Name)</h2>
@@ -45,10 +44,7 @@
             </div>
         </section>
         <section id='ticket-sheet' class='page' ng-show='main.ticketsPrinted'>
-<!--           <button id='return-button' ng-click='main.return()'>RETURN</button>-->
-            <div class='ticket-sheet-wrapper'>
-
-            </div>
+            <div class='ticket-sheet-wrapper'></div>
         </section>
     </body>
 </html>
