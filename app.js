@@ -52,12 +52,12 @@
             {
                 name: 'Cigarettes',
                 price: 10,
-//                amount: 40
+                amount: 40
             },
             {
                 name: 'Black n\' Mild',
                 price: 2,
-//                amount: 50
+                amount: 50
             },
 
         ];
@@ -106,6 +106,5 @@
         this.return = function () {
             main.ticketsPrinted = false;
         }
-        this.printTickets()
     })
 })(angular.module('ticket-generator', []))

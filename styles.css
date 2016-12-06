@@ -10,6 +10,14 @@ body {
     margin: 0;
     min-width: 100%;
     text-align: center;
+    page-break-before: always;
+    page-break-after: always;
+}
+.page-break {
+    clear: both;
+    min-height: 1px;
+    page-break-after: always;
+    page-break-before: always;
 }
 .wrapper {
     max-width: 1236px;
@@ -21,8 +29,6 @@ body {
     margin-right: auto;
     margin-left: auto;
     clear: both;
-    page-break-before: always;
-    page-break-after: always;
 }
 .print-wrapper.landscape {
     max-width: 780px;
